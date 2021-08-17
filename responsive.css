@@ -1,0 +1,528 @@
+
+
+@media only screen and (max-width: 1300px){
+	.uniWidth{
+		width:  95%;
+	}
+
+	.albumTracks{
+		width: 65%;
+	}
+}
+
+
+
+@media only screen and (max-width:  1200px){
+	#logo{
+		width:  180px;
+	}
+
+	.navListH{
+		border:  1px solid black;
+	}
+
+	.navList{
+		font-size:  16px;
+	}
+
+	
+/*	.albumTracks{
+		background: red;
+	}*/
+
+
+}
+
+
+@media only screen and (max-width: 1100px){
+	.track3rd{
+		/*height: 70px;*/
+	}
+}
+
+
+
+@media only screen and (max-width:  980px){
+	.bars{
+		display:  block;
+		width:  25px;
+		height:  25px;
+		position:  absolute;
+		float:  left;
+		cursor:  pointer;
+		right: 0;
+		/*display: none;*/
+	}
+
+	.bars:hover .bar1{
+		transform:  translate3d(0px, -2px, 0px);
+	}
+
+	.bars:hover .bar3{
+		transform:  translate3d(0px, 2px, 0px);
+	}
+
+	.bar1, .bar2, .bar3{
+		width:  100%; 
+		border-top:  3px solid black;
+		position: relative;
+		transition: 250ms;
+	}
+
+	.bar1{
+		/*animation-name: bar1anim;*/
+		animation-duration: 1s;
+	}
+
+	.bar2{
+		/*display: none;*/
+		position:  absolute;
+	}
+
+	.bar3{
+		position:  absolute;
+		bottom:  0;
+		/*display:  none;*/
+
+		/*animation-name:  bar3anim;*/
+		animation-duration: 1s;
+	}
+
+	@keyframes bar1anim{
+		0% {transform:  rotate(45deg); top:  10px; left:  -5px}
+		100% {transform:  rotate(0deg); top:  0px; left:  0px}
+	}
+
+	@keyframes bar3anim{
+		0% {transform:  rotate(-45deg); bottom:  10px; left:  -5%}
+		100% {transform:  rotate(0deg); bottom:  0px; left:  0px}
+	}
+
+	.barHolder{
+		float: right;
+		heigth:  25px;
+		postion:  relative;
+		width:  60px;
+		height:  25px;
+		display: block;
+	}
+
+	.mobLogo{
+		float:  left;
+		/*border:  1px solid blue;*/
+		width: 25px;
+		height: 25px;
+		position: absolute;
+		left: 0;
+	}
+
+	.mobNavImg{
+		position: absolute;
+		height: 25px;
+		cursor:  pointer;
+		/*left:  0;*/
+	}
+
+	.mobNavImg:hover{
+		height:  30px;
+	}
+
+	.closeHolder{
+		width: 25px;
+		height:  25px;
+		float:  right;
+		position: fixed;
+		top: 30px;
+		cursor: pointer;
+		right: 20px;
+		z-index: 10;
+	}
+
+	.close1, .close2{
+		border-top: 3px solid white;
+		width:  100%;
+		position: relative;
+	}
+
+	.close1{
+		transform: rotate(45deg);
+		top: 10px;
+		left: -5px;
+		animation-name: close1anim;
+		animation-duration: 1s;
+	}
+
+	.close2{
+		transform: rotate(-45deg);
+		bottom: 12px;
+		left:  -5px;
+		animation-name:  close2anim;
+		animation-duration: 1s;
+		position:  absolute;
+		/*bottom: 0;*/
+	}
+
+	@keyframes close1anim{
+		0% {transform: rotate(0deg); top: 0px; left: 0px}
+		100% {transform: rotate(45deg); top: 10px; left: -5px}
+	}
+
+	@keyframes close2anim{
+		0% {transform: rotate(0deg); bottom: 0px; left: 0px}
+		100% {transform: rotate(-45deg); bottom: 12px; left: -5px}
+	}
+
+
+	/*nav mobile*/
+	.nav{
+		display:  none;
+	}
+
+	.navBottom{
+		display:  none;
+	}
+
+
+	.mobNav{
+		/*display:  block;*/
+		width:  100%;
+		height:  100%;
+		background: rgb(0, 0, 0, 0.8);
+		position: fixed; 
+		z-index: 2000;
+		overflow-y: scroll;
+	}
+
+	.mobSearchHolder{
+		width:  100%;
+		/*height: 70px;*/
+		margin-top: 90px;
+		position: relative;
+		float: left;
+		padding: 0px 40px;
+		background: lightgrey;
+	}
+
+	.mobRestHolder{
+		width: 100%;
+		float: left;
+		padding: 0px 40px;
+		position: relative;
+		color: white;
+		border-bottom: 1px solid #383838;
+		cursor: pointer;
+	}
+
+	.mobListHolder{
+		/*background: blue;*/
+		float: left;
+		width: 100%;
+		margin: 15px 0px 15px 0px;
+		position: relative;
+		cursor: pointer;
+	}
+
+	.mobSHolder{
+		height: 30px;
+	}
+
+	.mobSSHolder{
+		/*background: red;*/
+	}
+
+	.mobNavIcon{
+		/*border:  1px solid black;*/
+	}
+
+	.mobNavList{
+		margin-left: 30px;
+		font-size: 25px;
+		position: absolute;
+		bottom: 0;
+		font-weight: bold;
+	}
+
+	.mobSearch{
+		float:  left;
+	    margin-left: 5px; 
+	    border:  none;
+	    background:  none;
+	    font-size:  25px;
+	    float: left;
+	    /*padding:  5px 8px;*/
+	    font-weight: bold;
+	    margin-left: 10px;
+	}
+
+	.mobSearch:focus {
+	  outline: none;
+	}
+
+	.mobNavIconSecond{
+		position: absolute;
+		bottom: 5px;
+		float: left;
+	}
+
+	.restNavList{
+		margin-left: 0px;
+		/*color: green;*/
+	}
+
+	.bottom50{
+		margin-bottom: 100px;
+	}
+
+
+
+	/*album info*/
+	.albumTop{
+		height: auto;
+		float: left;
+		margin-bottom: 50px;
+	}
+
+	.albumImg{
+	    /*width:  500px;*/
+	    float:  left; 
+	    margin-right: 0px;
+	    margin-bottom: 50px;
+	    
+	    width: 90%;
+
+	    top: 0;
+	    left: 50%;
+	    transform: translateX(-50%) translateY(0%);
+	}
+
+	.albumInfo{
+	    float:  left;
+	    height:  auto; 
+
+	    top: 0;
+	    left: 50%;
+	    transform: translateX(-50%) translateY(0%);
+	}
+
+	.profileHolder{
+		display: none;
+	}
+
+	.albumPlay{
+		width: 90%;
+		margin-bottom: 0px;
+		margin-right: 0px;
+
+		/*top: 0;*/
+	    left: 50%;
+	    transform: translateX(-50%);
+	    position: relative;
+	}
+
+	.albumTracks{
+		width:  90%;
+		position: relative;
+	    left: 50%;
+	    transform: translateX(-50%);
+	    margin-top: 10px;
+	}
+
+
+	.track{
+		width: auto;
+	}
+
+	.trackNumber, .trackArtist, .trackLength{
+		display: none;
+	}
+
+	.trackPlay{
+		margin-left: 2%;
+		width: 15px;
+		height: 15px;
+		font-size: 7px;
+	}
+
+
+
+
+
+	/*more section*/
+	.moreCell{
+		width: 32.66%;
+	}
+
+	.moreRight{
+		margin-right: 0%;
+	}
+
+	.more3Right{
+		margin-right: 1%;
+	}
+
+
+
+
+	/*footer*/
+
+	.socialCopyHolder{
+		/*display: none;*/
+		position: relative;
+		float: right;
+	}
+
+	.socialMediaHolder{
+		clear: left;
+	}
+
+	.helpHolder{
+		clear: right;
+		width: 100%;
+	}
+
+	.helpParent{
+		width: 100%;
+	}
+
+	.songTime{
+		display: none;
+	}
+
+
+
+	/*bottom player*/
+	.bottomPlayer{
+		/*display: block;*/
+		/*display: none;*/
+		width: 100%;
+		/*height: 200px;*/
+		position: fixed;
+		bottom: 0;
+		background: white;
+		z-index: 1000;
+		
+		text-align: center;
+	}
+
+	.bottomName{
+		margin-top: 5px;
+	}
+
+	.bottomTime{
+		float: left;
+		width: 100%;
+		height: 25px;
+		clear: left;
+		background:  #ececec;
+		position: relative;
+		margin-top: 10px;
+		cursor: pointer;
+	}
+
+	.bottomSongValue{
+		width: 0%;
+		height: 100%;
+		background:  #1e90ff;
+		position: absolute;
+		z-index: 1;
+		/*display: none;*/
+	}
+
+	.bottomButton{
+		width: 25px;
+		height: 25px;
+		border-radius: 50%;
+		box-shadow: 0px 0px 10px 5px rgb(0, 0, 0, 0.2);
+		background: white;
+		position: absolute;
+		/*float: left;*/
+		cursor: pointer;
+		z-index: 10;
+		left: -12.5px;
+	}
+
+	.bottomIconHolder{
+		width: 100%;
+		float: left;
+		height: 50px;
+		background: white;
+	}
+
+	.bottomIconCell{
+		width: 20%;
+		height: 100%;
+		float: left;
+		position: relative;
+		/*background: red;*/
+		cursor: pointer;
+	}
+
+	.bottomIconCell:hover{
+		color: #1e90ff;
+	}
+
+	.bottomBorderRight{
+		border: 1px solid #ccc;
+	}
+}
+
+@media only screen and (max-width: 820px){
+	.acknowledge{
+		width: 95%;
+	}
+}
+
+
+@media only screen and (max-width: 500px){
+	.mobSearch{
+		font-size: 16px;
+	}
+
+	.mobNavList{
+		font-size: 20px;
+	}
+
+	.mobSearchHolder{
+		padding: 0px 30px;
+	}
+
+	.mobRestHolder{
+		padding: 0px 30px;
+	}
+
+
+
+	.levelDays{
+	    font-size:  40px; 
+	}
+
+	.artist{
+	    font-size:  22px;
+	}
+
+	.date{
+	    font-size:  18px;
+	}
+
+
+
+
+
+	/*more section*/
+	.moreCell{
+		width: 49%;
+	}
+
+	.moreRight{
+		margin-right: 0%;
+	}
+
+	.more3Right{
+		margin-right: 0%;
+	}
+
+	.more4Right{
+		margin-right: 2%;
+	}
+
+}
