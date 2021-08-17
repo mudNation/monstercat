@@ -1,0 +1,802 @@
+*{
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    transition: 250ms;
+
+}
+
+.uniWidth{
+    width: 1230px;
+}
+
+.center_horizontal{
+    position: relative; 
+    left: 50%; 
+    transform: translateX(-50%); 
+}
+
+.center_vertical{
+    position: relative; 
+    top: 50%; 
+    transform: translateY(-50%); 
+}
+
+.center{
+    position: relative; 
+    top: 50%; 
+    left: 50%; 
+    transform: translateY(-50%) translateX(-50%); 
+}
+
+.left{
+    float: left; 
+}
+
+.clear{
+    clear: left; 
+}
+
+.clearLeft{
+    float: left; 
+    clear: left; 
+}
+
+#top{
+    /*height: 100px;*/
+    margin-top: 20px;
+    position:  relative;
+    z-index: 100;
+}
+
+.logoHolder{
+    width:  100%;
+    height:  50px;
+}
+
+#logo{
+    width: 185px;
+}
+
+.nav{
+    float: right;
+    font-size: 20px; 
+    font-weight: bold;
+}
+
+.navListH{
+    float:  left; 
+    height:  35px;
+}
+
+.navList{
+    font-weight:  bold;
+    /*color:  green;*/
+    font-size:  20px;
+    float:  left; 
+    /*clear:  left;*/
+    position:  relative;
+    overflow:  hidden;
+    padding: 0.3em 0;
+    display:  block;
+    height:  100%;
+    float:  left;
+}
+
+.navList::after{
+    position:  absolute;
+    content: '';
+    bottom:  0;
+    width:  100%;
+    height:  0.15em;
+    background-color: black;
+    left:  0;
+    opacity:  1;
+    transition:  opacity 300ms, transform 300ms;
+
+    transform:  translate3d(-102%, 0px, 0px);
+
+}
+
+.navList:focus::after, 
+.navList:hover::after{
+    opacity:  1;
+    transform:  translate3d(0, 0, 0px);
+}
+
+.navRight{
+    margin-right:  15px;
+    cursor:  pointer;
+}
+
+.navIconH{
+    float:  left;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.navIcon{
+    float: left;
+
+}
+
+.navImg{
+    width:  15px;
+}
+
+#navcomm, #navradio{
+    clear:  right;
+    display:  none;
+    transitions:  300ms;
+}
+
+.navBottom{
+    float:  left; 
+    width:  100%; 
+    position:  relative;
+}
+
+#navLeft{
+    height:  50px;
+    float:  left;
+}
+
+#navRight{
+    height:  50px;
+    /*width:  500px;*/
+    float:  right;
+}
+
+.navLeftField{
+    float:  left;
+    transition:  200ms;
+    cursor:  pointer;
+}
+
+.navLeftField:hover{
+    color:  #1e90ff;
+}
+
+.navLeftIcon{
+    font-size:  5px;
+    float:  left;
+}
+
+.navLeftText{
+    font-size:  16px;
+    float: left;
+    margin-left:  5px;
+    line-height: 100%;
+}
+
+
+.navSeperator{
+    border-right:  1px solid #ccc;
+    height:  20px;
+    float: left;
+    margin-left:  10px;
+    margin-right:  10px;
+}
+
+
+.searchField{
+    height:  20px;
+    float:  left;
+    transition:  200ms;
+}
+
+.input{
+    float:  left;
+    margin-left: 5px; 
+    border:  none;
+    background:  none;
+    padding:  5px 8px;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.searchIcon{
+    transition:  200ms;
+    cursor:  pointer;
+}
+
+.searchIcon:hover{
+    color:  #1e90ff;
+}
+
+.nrIconRight{
+    margin-right: 15px;
+}
+
+.navRightIcon{
+    cursor:  pointer;
+    transition:  200ms;
+    float:  left;
+    color:  black;
+}
+
+.navRightIcon:hover{
+    color:  #1e90ff;
+}
+
+.volumeBar{
+    width:  20px;
+    height:  100px;
+    background-color:  #ccc;
+    position:  absolute;
+    top:  20px;
+    right:  0;
+    display:  none;
+    border-radius: 2px;
+}
+
+.volumeValue{
+    width:  100%;
+    height: 50%;
+    background:  #1e90ff;
+    position:  absolute;
+    bottom:  0;
+
+}
+
+.volumeHolder{
+    /*background:  blue;*/
+    float:  left;
+    margin-top: 17px;
+    position:  relative;
+    width:  16px;
+}
+
+.volumeHolder:hover{
+    height: 120px;
+}
+
+.volumeHolder:hover .volumeBar{
+    display: block;
+}
+
+.redoClick{
+    color:  lightyellow;
+    cursor:  pointer;
+    transition:  200ms;
+    float:  left;
+}
+
+
+
+
+/* album section */
+.album{
+    width:  100%;
+    /*height:  800px;*/
+    float:  left;
+    position:  relative;
+    margin-top:  50px;
+    margin-bottom: 50px;
+}
+
+.imageContainer{
+    width:  100%;
+    height:  100%;
+    position:  absolute;
+    z-index: -1;
+}
+
+.img{
+    width:  100%;
+    height:  100%;
+    object-fit: cover; 
+    position:  absolute;
+}
+
+.albumCover{
+    width:  100%; 
+    height:  100%;
+    background:  linear-gradient(to bottom, rgba(0, 0, 0, 0.2), black);
+    position:  absolute; 
+    z-index:  10;
+    height:  40%;
+}
+
+.albumCover2{
+    height:  60%;
+    position:  absolute;
+    bottom: 0;
+    background:  black;
+    z-index: 10;
+    width:  100%;
+}
+
+.albumBody{
+    margin-top:  50px;
+    /*height:  500px; */
+    positon:  relative; 
+    /*height: 1000px;*/
+    float: left;
+    z-index: 30;
+}
+
+.albumTop{
+    height:  370px;
+}
+
+.albumImg{
+    /*width:  500px;*/
+    float:  left; 
+    margin-right:  30px;
+    /*height:  100%;*/
+    width: 30%;
+}
+
+.albumInfo{
+    float:  left;
+    height:  250px; 
+    /*width:  200px; */
+    color:  white;
+}
+
+.levelDays{
+    font-size:  50px; 
+    
+    font-weight: bold;
+    margin-bottom:  10px; 
+}
+
+.artist{
+    font-size:  25px;
+    margin-bottom: 10px;
+}
+
+.date{
+    color:  #ccc;
+    font-size:  20px;
+}
+
+.profileHolder{
+    float:  left; 
+    position:  absolute;
+    width:  100px;
+}
+
+.profileImgHolder{
+    width:  100px;
+    height:  100px; 
+    position: relative;
+    margin-top: 20px;
+    border-radius:  50%;
+    overflow: hidden;
+    cursor:  pointer; 
+}
+
+.profileButton{
+    clear:  left; 
+    float:  left; 
+    padding:  15px;
+    box-shadow: 0px 0px 5px 1px white;
+    margin-top:  10px; 
+    font-size:  18px;
+    display:  none;
+    cursor:  pointer;
+    border:  1px solid white;
+    transition:  300ms;
+}
+
+.profileButton:hover{
+    color:  #1e90ff;
+}
+
+.profileHolder:hover .profileButton{
+    display:  block;
+}
+
+.rightProfile{
+    left:  120px;
+}
+
+.albumPlay{
+    /*width:  370px;*/
+    width: 30%;
+    height:  auto; 
+    margin-top:  50px; 
+    float:  left; 
+    clear:  left; 
+    margin-right:  30px;
+}
+
+.albumTracks{
+    float: left; 
+    /*clear:  left; */
+    margin-top:  50px; 
+    margin-bottom: 30px;
+
+    width: 63%;
+}
+
+.playField{
+    padding:  15px 30px; 
+    color:  #383838;
+    background:  white;
+    float:  left; 
+    cursor:  pointer;
+    transition:  300ms;
+    font-size:  16px;
+}
+
+.playText{
+    float:  left;
+    margin-right:  5px;
+}
+
+.albumPlayIcon{
+    transition:  300ms;
+}
+
+.playField:hover .albumPlayIcon{
+    transform:  translate3d(5px, 0px, 0);
+    /*color:  blue;*/
+}
+
+.playField:hover, .albumField:hover{
+    background:  #383838;
+    color:  white;
+}
+
+.stream{
+    clear:  left;
+    float:  left; 
+    margin-top:  20px; 
+    margin-bottom:  10px;
+    color:  white;
+    font-size:  18px;
+}
+
+.albumField{
+    background:  white;
+    padding:  15px 20px;
+    font-size:  16px;
+    margin-top: 10px;
+    color:  #383838;
+    cursor:  pointer;
+    transition:  300ms;
+    /*float:  left; */
+}
+
+.albumRight{
+    margin-right: 20px;
+    float: left;
+}
+
+.trackText{
+    color:  white;
+}
+
+.trackList{
+    margin-top:  20px; 
+    width: 100%;
+}
+
+.track{
+    height:  50px;
+    /*width:  100%;*/
+    /*border: 1px solid red;*/
+    /*float: left;*/
+    /*clear: left;*/
+}
+
+.trackNumber{
+    width:  50px;
+    line-height: 100%;
+    text-align: center;
+    /*border: 1px solid black;*/
+}
+
+.trackNumberRight{
+    margin-right: 2%;
+}
+
+.trackPlay{
+    width: 25px; 
+    height: 25px;
+    /*padding: 10px; */
+    background:  #383838;
+    color:  white;
+    border-radius: 50%;
+    font-size:  12px;
+    cursor:  pointer; 
+    transition:  300ms;
+    /*margin-right:  20px; */
+}
+
+.trackPlay:hover{
+    background: #1e90ff;
+}
+
+.trackName{
+    /*width:  350px;*/
+    width: 22em;
+    /*margin-right:  30px;*/
+    /*border: 1px solid black;*/
+}
+
+.trackArtist{
+    /*margin-right:  30px;*/
+    width: 100px;
+    text-decoration: underline;
+    cursor: pointer;
+    /*border: 1px solid black;*/
+}
+
+.trackArtist:hover{
+    color: #1e90ff;;
+}
+
+.trackLength{
+    width:  50px;
+    /*border: 1px solid black;*/
+    /*margin-right: 30px;*/
+}
+
+.trackCredit{
+    border:  1px solid black; 
+    padding:  2px;
+    font-size: 10px;
+    /*margin-right:  20px;*/
+}
+
+.trackRight{
+    margin-right: 3%;
+}
+
+.white{
+    background:  white; 
+}
+
+.grey{
+    background:  #ececec;
+}
+
+.trackSpan{
+    font-size:  12px; 
+}
+
+.read{
+    text-decoration: underline;
+}
+
+
+
+
+
+/*more section*/
+.moreSection{
+    margin-bottom:  50px; 
+}
+.more{
+    font-size:  30px;
+    color:  #383838;
+    margin-bottom:  30px;
+}
+
+.moreSpan{
+    color:  #1e90ff;
+}
+
+.moreCell{
+    margin-bottom: 20px;
+    transition:  300ms;
+    cursor:  pointer;
+    /*border: 1px solid black;*/
+
+    width: 15.83%;
+}
+
+.moreRight{
+    margin-right: 1%;
+}
+
+.moreCell:hover{
+    color:  #1e90ff;
+}
+
+.moreImg{
+    width:  100%;
+}
+
+.albumName{
+    font-size:  14px;
+    font-weight: bold;
+    margin-top:  10px;
+    margin-bottom: 5px;
+}
+
+.albumArtist{
+    font-size:  12px;
+}
+
+.termsParent{
+    position: relative;
+    float: left;
+    margin-bottom: 30px;
+}
+.termsHolder{
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.termsList{
+    font-weight: bold;
+    transition:  300ms; 
+    cursor:  pointer;
+}
+
+.termsList:hover, .socialIcon:hover{
+    color: #1e90ff;
+}
+
+.termsRight{
+    margin-right: 10px;
+    font-size:  14px;
+}
+
+.socialMediaHolder{
+    /*float:  right;*/
+    /*position: absolute;*/
+    /*right: 0;*/
+}
+
+.socialCopyHolder{
+    position: absolute;
+    right: 0;
+}
+
+.socialIcon{
+    font-size:  16px;
+    transition:  300ms;
+}
+
+.socialRight{
+    margin-right: 15px;
+}
+
+.helpParent{
+    margin-bottom:  20px;
+}
+
+.helpText{
+    margin-left: 5px;
+}
+
+.helpSeperator{
+    border-right:  1px solid ;
+    border-right:  1px solid #ccc;
+    height:  20px;
+}
+
+.copyHolder{
+    float:  right;
+    margin-top: 20px;
+}
+
+.copy{
+    font-weight: bold;
+    text-align: right;
+    font-size:  14px;
+    margin-bottom: 5px;
+}
+
+.copyText{
+    font-size:  14px;
+    text-align: right;
+}
+
+.acknowledge{
+    width:  800px; 
+    text-align: center;
+    position: relative;
+    margin-bottom: 20px;
+    font-size:  12px;
+    opacity: 0.4;
+}
+
+.footerLogo{
+    opacity: 0.4;
+    width:  25px;
+    margin-bottom: 40px;
+}
+
+#fixedPlay{
+    position:  fixed; 
+    top:  0; 
+    right:  0;
+    height:  50px;
+    background:  white;
+    z-index: 100;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-delay: -3s;
+    display: none;
+}
+
+.fixedTrackName{
+    line-height: 60%;
+    margin-right: 20px;
+    margin-left:  10px;
+}
+
+@keyframes example {
+  0%   {top: -100%;}
+  25%  {top: -75%;}
+  50%  {top: -50%;}
+  75%  {top: -25%;}
+  100% {top: 0px;}
+}
+
+.songTime{
+    width:  100%;
+    position:  fixed; 
+    height:  5px;
+    background:  #ececec;
+    z-index: 100;
+    transition:  300ms;
+}
+
+.songValue{
+    width:  0%; 
+    height:  100%; 
+    background:  #ccc;
+}
+
+.songTime:hover .songValue{
+    background:  #1e90ff;
+}
+
+.songTime:hover{
+    height:  12px;
+}
+
+.blueColor{
+    color:  #1e90ff;
+}
+
+.blackColor{
+    color:  black;
+}
+
+.blackColor:hover{
+    color:  #1e90ff;
+}
+
+.yellowColor{
+    color:  maroon;
+}
+
+.yellowColor:hover{
+    color:  maroon;
+}
+
+.barHolder{
+    display: none;
+}
+/*.bars{
+    display:  none;
+}*/
+
+.mobLogo{
+    /*display:  none;*/
+}
+
+.closeHolder{
+    /*display:  none;*/
+}
+
+.mobNav{
+    display: none;
+}
+
+.bottomPlayer{
+    display: none;
+    /*border: 1px solid blue;*/
+}
